@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>India vs USA PM2.5 Seasonal Comparison</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body class="page-bg-comparison">
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="nav-inner">
+      <div class="nav-brand">Air Pollution</div>
+      <div class="nav-links">
+        <a class="nav-link" href="../home/index.html">Home</a>
+        <a class="nav-link" href="./india_bar.html">India</a>
+        <a class="nav-link" href="./usa_bar.html">USA</a>
+        <a class="nav-link active" href="./index.html">Comparison</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <div class="container">
+      <h1 class="comparison-title">
+        <span class="india-word">India</span> vs <span class="usa-word">USA</span> PM2.5 (Fine Inhalable Particles) by Season
+      </h1>
+
+      <section class="chart-shell">
+        <div class="filter-row">
+          <label for="comparison-india-city-filter">India City:</label>
+          <select id="comparison-india-city-filter" class="city-select"
+            aria-label="Select India city for comparison"></select>
+
+          <label for="comparison-usa-city-filter">USA City:</label>
+          <select id="comparison-usa-city-filter" class="city-select"
+            aria-label="Select USA city for comparison"></select>
+        </div>
+
+        <svg id="comparison-chart" role="img" aria-label="India and USA grouped PM2.5 chart"></svg>
+        <div id="comparison-legend" class="legend"></div>
+      </section>
+    </div>
+  </main>
+
+  <div id="tooltip" class="tooltip"></div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="./js/comparison.js"></script>
+</body>
+
+</html>
